@@ -1,0 +1,18 @@
+
+  <mat-card class="dogCard" style="text-align: center;" (click)="cardClicked.emit()" [@cardFlip]="data.state">
+    <div class="face front">
+    <mat-card-title >
+        {{data.breed}}
+      </mat-card-title>
+      <mat-card-subtitle >Dog Breed</mat-card-subtitle>
+      <img mat-card-image src="https://images.dog.ceo/breeds/terrier-yorkshire/n02094433_730.jpg" >
+      <mat-card-actions>
+        <button mat-raised-button >Information</button>
+      </mat-card-actions>
+    </div>
+    <div class="face back">
+      <img src="../../../assets/pictures/card-back.jpg">
+    </div>
+  </mat-card>
+
+

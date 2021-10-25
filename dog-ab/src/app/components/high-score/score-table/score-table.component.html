@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Player Name</th>
+    <th>Time</th>
+    <th>Moves</th>
+    <th>Score</th>
+  </tr>
+  <tr *ngFor="let game of gamesResults">
+    <td>{{game.date}}</td>
+    <td>{{game.name}}</td>
+    <td>{{game.time}}</td>
+    <td>{{game.moves}}</td>
+    <td>{{game.score}}</td>
+  </tr>
+</table>

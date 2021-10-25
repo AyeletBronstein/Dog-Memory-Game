@@ -1,0 +1,32 @@
+<div *ngIf="!isStart" class="homeButton">
+  <h1 >Welcome to Dog Memory Game</h1>
+  <button (click)="toggleStart()" mat-raised-button >New Game</button>
+</div>
+
+<div *ngIf="isStart">
+  <form [formGroup]="newGameForm" autocomplete="off" novalidate>
+    <p>Please select board size:</p>
+    <mat-form-field>
+      <mat-label>Board Size</mat-label>
+      <mat-select placeholder="Player's board size" formControlName="boardSize" id="boardSize">
+        <mat-option *ngFor="let s of sizes" [value]="s.id">
+          {{s.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+  <div>
+    <p>Please Enter your name:</p>
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput type="text" placeholder="Player's name" formControlName="name" id="name"  >
+      <mat-error *ngIf="hasError('name', 'required')">Name is required</mat-error>
+    </mat-form-field>
+  </div>
+  <mat-card-actions >
+    <button mat-raised-button [disabled]="!newGameForm.valid" (click)="startGame(newGameForm.value)">Start</button>
+  </mat-card-actions>
+</form>
+</div>
+
+

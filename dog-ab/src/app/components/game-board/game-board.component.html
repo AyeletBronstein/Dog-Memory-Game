@@ -1,0 +1,11 @@
+<p align="center">Tap on a card to flip it. You can only flip a maximum of two cards at a time. A match will
+  remove
+  those cards!</p>
+<p>{{display }} Seconds</p>
+<div>
+  <div class="grid p-16">
+    <app-card *ngFor="let c of cards; let idx=index" [data]="c" (cardClicked)="cardClicked(idx)">
+    </app-card>
+  </div>
+</div>
+<div>Number of moves: {{moves}}</div>

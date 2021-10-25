@@ -1,0 +1,29 @@
+
+
+.nav-bar {
+  background: #ffcaeb;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.app-container {
+  height: 100%;
+  overflow: hidden;
+  margin: 20px 60px;
+}
+
+a {
+  color: #a10045;
+}
+
+button {
+  color: #a10045;
+  background: #ffcaeb;
+}
+
+h1 {
+  color: #a10045;
+  text-align: center;
+}

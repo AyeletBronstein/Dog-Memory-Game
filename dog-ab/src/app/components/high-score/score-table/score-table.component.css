@@ -1,0 +1,25 @@
+
+
+tr {
+  margin: 5px;
+}
+
+th, td {
+  margin: 5px;
+  border: 1px solid gray;
+  padding: 10px;
+}
+
+a {
+  color: #a10045;
+}
+
+button {
+  color: #a10045;
+  background: #ffcaeb;
+}
+
+h1 {
+  color: #a10045;
+  text-align: center;
+}

@@ -1,0 +1,60 @@
+a {
+  color: #a10045;
+}
+
+button {
+  color: #a10045;
+  background: #ffcaeb;
+}
+
+h1 {
+  color: #a10045;
+  text-align: center;
+}
+
+:host {
+  display: block;
+}
+
+.dogCard {
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100px;
+
+  cursor: pointer;
+
+  position: relative;
+
+  transform-style: preserve-3d;
+
+  max-width: 100px;
+}
+
+.back,
+.front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+.back {
+  transform: rotateY(0deg);
+}
+
+.front {
+  transform: rotateY(180deg);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+

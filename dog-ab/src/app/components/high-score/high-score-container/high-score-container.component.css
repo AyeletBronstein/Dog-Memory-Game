@@ -1,0 +1,24 @@
+
+.tables {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.score-table {
+
+}
+a , p{
+  color: #a10045;
+  text-align: center;
+}
+
+button {
+  color: #a10045;
+  background: #ffcaeb;
+}
+
+h1 {
+  color: #a10045;
+  text-align: center;
+}

@@ -1,0 +1,52 @@
+<h1>Information</h1>
+<body>
+<div>
+  <p>Search Breed:</p>
+  <mat-form-field>
+    <input type="text"
+           placeholder="Breed"
+           aria-label="Number"
+           matInput
+           [formControl]="myControl"
+           [matAutocomplete]="auto"
+           [(ngModel)]="breed">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of breeds" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</div>
+
+<div>
+  <p>Please enter # of pics:</p>
+  <mat-form-field>
+    <mat-label>Number</mat-label>
+    <input matInput [(ngModel)]="numPics">
+  </mat-form-field>
+</div>
+<div>
+  <p>text about breed</p>
+</div>
+<div>
+  <p>Photos of breed (amount specified by input)</p>
+</div>
+<div>
+  <p>Optional, upload your own dog photo</p>
+  <input type="file" class="file-input"
+         (change)="onFileSelected($event)" #fileUpload>
+
+  <div class="file-upload">
+
+    {{fileName || "No file uploaded yet."}}
+
+    <button mat-mini-fab color="#ffcaeb" class="upload-btn"
+            (click)="fileUpload.click()">
+      <mat-icon>attach_file</mat-icon>
+    </button>
+  </div>
+</div>
+<p>{{breed}}</p>
+<p>{{numPics}}</p>
+</body>
+
